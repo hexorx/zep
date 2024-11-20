@@ -8,13 +8,13 @@ http:
   # Host to bind to. Default is 0.0.0.0
   host: 0.0.0.0
   # Port to bind to. Default is 8000
-  port: ${PORT | EnvInt}
+  port: "${PORT}"
   max_request_size: 5242880
 postgres:
   user: ${POSTGRES_USER}
   password: ${POSTGRES_PASSWORD}
   host: ${PGHOST}
-  port: ${PGPORT | EnvInt}
+  port: "${PGPORT}"
   database: ${POSTGRES_DB}
   schema_name: public
   read_timeout: 30
